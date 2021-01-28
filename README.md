@@ -1,24 +1,29 @@
-# README
+# Rake sa mère
+### A simple tutorial to create clean and simple tests for
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Stack
 
-Things you may want to cover:
+- Rspec
 
-* Ruby version
+## Installation
 
-* System dependencies
+For it's first launch run the following command :
 
-* Configuration
+```
+bundle install
+```
 
-* Database creation
+Create the db
 
-* Database initialization
+```
+rails db:create
+```
+Then run the migrations
 
-* How to run the test suite
+```
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributions
 
-* Deployment instructions
-
-* ...
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
