@@ -5,6 +5,12 @@
 
 - Rspec
 
+```
+group :development, :test do
+  gem 'rspec-rails'
+end
+```
+
 ## Best Practices
 
 ### Describe
