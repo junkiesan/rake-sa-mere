@@ -54,6 +54,8 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   # Test the associations on active record
   gem 'shoulda-matchers', '~> 4.0'
+  # Create fake data
+  gem 'factory_bot_rails', '~> 6.1'
   gem 'webdrivers'
 end
 
