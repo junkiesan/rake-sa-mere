@@ -48,12 +48,12 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   # Test the associations on active record
   gem 'shoulda-matchers', '~> 4.0'
+  gem 'rails-controller-testing', '~> 0.0.3'
   # Create fake data
   gem 'factory_bot_rails', '~> 6.1'
   gem 'webdrivers'
