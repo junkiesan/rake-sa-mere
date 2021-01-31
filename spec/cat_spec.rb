@@ -25,4 +25,10 @@ RSpec.describe Cat, type: :model do
       expect(subject).to_not be_valid
     end 
   end
+
+  context "#greeting" do
+    it "returns 'Meow!'" do
+      expect(Cat.greeting).to eq("Meow!")
+    end
+  end
 end
