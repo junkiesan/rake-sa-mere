@@ -1,0 +1,9 @@
+<%= render 'error', object: @user %>
+
+<%= form_for(@user) do |form| %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.submit "Save" %>
+<% end %>

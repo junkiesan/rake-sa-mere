@@ -1,0 +1,17 @@
+<h1>User list</h1>
+
+<% if @users.present? %>
+  <table>
+    <thead>
+      <th>Name</th>
+    </thead>
+
+    <tbody>
+      <%= render @users %>
+    </tbody>
+  </table>
+
+<% else %>
+  <h3>No user found</h3>
+  <%= link_to("Add new", new_user_path) %>
+<% end %>
