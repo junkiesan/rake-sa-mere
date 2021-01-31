@@ -1,0 +1,454 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/environment.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          null,
+          1
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/application.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/boot.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/environments/test.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/initializers/application_controller_renderer.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/initializers/assets.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/initializers/backtrace_silencers.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/initializers/content_security_policy.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/initializers/cookies_serializer.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          1
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/initializers/mime_types.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/initializers/wrap_parameters.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/spec/factories/cat_factory.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/spec/factories/user_factory.rb": {
+        "lines": [
+          1,
+          1,
+          9,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/config/routes.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/spec/support/factory_bot.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          6,
+          6,
+          4,
+          null,
+          2,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          6,
+          3,
+          null,
+          3,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          12,
+          12,
+          4,
+          null,
+          null,
+          null,
+          1,
+          12,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/app/helpers/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/spec/models/cat_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          8,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          1,
+          2,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/app/models/cat.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          5,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Julien/code/junkiesan/Projects/rake-sa-mere/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1612113956
+  }
+}

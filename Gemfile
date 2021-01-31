@@ -57,6 +57,8 @@ group :test do
   # Create fake data
   gem 'factory_bot_rails', '~> 6.1'
   gem 'webdrivers'
+  # interface for test
+  gem 'simplecov', require: false, group: :test
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
