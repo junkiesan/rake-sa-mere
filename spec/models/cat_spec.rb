@@ -4,7 +4,8 @@ RSpec.describe Cat, type: :model do
   subject { 
     described_class.new(name: "Garfield",
                         age: 10,
-                        race: "fat")
+                        race: "fat",
+                        user: User.new(name: "Pierre"))
   }
 
   context "#initialize" do
@@ -29,6 +30,22 @@ RSpec.describe Cat, type: :model do
   context "#greeting" do
     it "returns 'Meow!'" do
       expect(Cat.greeting).to eq("Meow!")
+    end
+  end
+
+  describe 'associations' do
+    it { should belong_to(:user).class_name('User') }
+  end
+
+  describe 'validations' do
+    context 'it validates name' do
+      it { is_expected.to validate_presence_of(:name) }
+    end
+    context 'it validates age' do
+      it { is_expected.to validate_presence_of(:age) }
+    end
+    context 'it validates race' do
+      it { is_expected.to validate_presence_of(:race) }
     end
   end
 end
