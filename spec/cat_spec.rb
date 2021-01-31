@@ -7,7 +7,7 @@ RSpec.describe Cat, type: :model do
                         race: "fat")
   }
 
-  context "when created" do
+  context "#initialize" do
     it { expect(subject).to be_valid }
 
     it "name should be valid" do
