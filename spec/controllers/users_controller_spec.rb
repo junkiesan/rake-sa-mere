@@ -11,7 +11,7 @@ RSpec.describe UsersController, type: :controller do
   end
 
    # index action
-   describe 'GET #index' do
+  describe '#index' do
     before do
       get :index
     end
@@ -21,4 +21,18 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  # new action
+  describe '#new' do
+    before do
+      get :new
+    end
+  
+    it 'is expected to assign user as new instance variable' do
+      expect(assigns[:user]).to be_instance_of(User)
+    end
+  
+    it 'renders new template' do
+      is_expected.to render_template(:new)
+    end
+  end
 end
