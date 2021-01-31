@@ -10,4 +10,15 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+   # index action
+   describe 'GET #index' do
+    before do
+      get :index
+    end
+
+    it 'is expected to assign user instance variable' do
+      expect(assigns[:users]).to eq(User.all)
+    end
+  end
+
 end
