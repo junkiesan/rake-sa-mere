@@ -26,12 +26,35 @@ describe Cat, '#meow?' do
 ### Context
 
 ```
-context 'when sleeping' do
-  it { is_expected.to respond_with false }
+context '#initialize' do
+    it { expect(subject).to be_valid }
 end
 ```
 
-### Factory Bot
+### Shortness
+
+Write short descriptive sentences
+
+```
+describe 'validations' do
+  context 'it validates name' do
+    it { is_expected.to validate_presence_of(:name) }
+  end
+end
+```
+
+### Subject
+
+Use the subject keyword to shorten your specs.
+
+```
+  subject { described_class.new(name: "Junkiesan") }
+```
+
+
+If you want more advices on how to write great specs, [BetterSpecs](https://www.betterspecs.org/) is here for you !
+
+## Factory Bot
 
 A gem that allow to populate your tests with data.
 
@@ -47,7 +70,7 @@ end
 
 If you want to learn more about Factory Bot use this [cheatsheet](https://devhints.io/factory_bot)
 
-### Simple Cov
+## Simple Cov
 
 A gem that help to check your specs as they grow.
 
@@ -57,7 +80,7 @@ require 'simplecov'
 SimpleCov.start
 ```
 
-### Github Actions
+## Github Actions
 
 Github permit to use Actions to work with Continuous Integration (CI).
 
