@@ -46,8 +46,11 @@ jobs:
           bundler install
       - name: Create database
         run: |
-          bundler exec rails db:create RAILS_ENV=test
-          bundler exec rails db:migrate RAILS_ENV=test
+          cp config/database.yml config/database.yml.ci
+          bundle exec rails db:prepare
+        # run: |
+        #   bundler exec rails db:create RAILS_ENV=test
+        #   bundler exec rails db:migrate RAILS_ENV=test
       - name: Run tests
         run: bundler exec rake
       - name: Upload coverage results    
