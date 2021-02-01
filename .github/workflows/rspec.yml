@@ -46,8 +46,7 @@ jobs:
           bundler install
       - name: Create database
         run: |
-          rails db:create
-          rails db:migrate
+          bundle exec rails db:prepare
         # run: |
         #   bundler exec rails db:create RAILS_ENV=test
         #   bundler exec rails db:migrate RAILS_ENV=test
