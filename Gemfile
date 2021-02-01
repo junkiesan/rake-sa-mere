@@ -57,6 +57,7 @@ group :test do
   # Create fake data
   gem 'factory_bot_rails', '~> 6.1'
   gem 'webdrivers'
+  gem 'rubocop-rails', require: false
   # interface for test
   gem 'simplecov', require: false, group: :test
 end
