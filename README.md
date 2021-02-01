@@ -37,6 +37,17 @@ end
 
 A gem that allow to populate your tests with data.
 
+```
+FactoryBot.define do
+  factory :model do
+    name { Faker::Name.name }
+    age { rand(0...15) }
+    user_id { User.sample.id }
+  end
+end
+```
+
+If you want to learn more about Factory Bot use this [cheatsheet](https://devhints.io/factory_bot)
 
 ### Github Actions
 
@@ -63,6 +74,7 @@ job-goal:
       run: the shell script doing the step
 ```
 If you need a specific environment you can and an env: variable to each step or job.
+
 For a [setup tutorial](https://www.pibit.nl/github/actions/rails/postgres/rspec/tutorial/example/2019/09/23/github-actions-with-rails-postgres-and-rspec/)
 
 ## Installation
