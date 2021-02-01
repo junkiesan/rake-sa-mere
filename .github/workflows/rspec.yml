@@ -13,21 +13,21 @@ jobs:
       - uses: actions/setup-node@v1
       - run: npm install -g bats
       - run: bats -v
-  rubocop-test:
-    name: Rubocop
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-ruby@v1
-        with:
-          ruby-version: ${{ env.RUBY_VERSION }}
-      - name: Install Rubocop
-        run: gem install rubocop
-      - name: Check code
-        run: rubocop
+  # rubocop-test:
+  #   name: Rubocop
+  #   runs-on: ubuntu-18.04
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - uses: actions/setup-ruby@v1
+  #       with:
+  #         ruby-version: ${{ env.RUBY_VERSION }}
+  #     - name: Install Rubocop
+  #       run: gem install rubocop
+  #     - name: Check code
+  #       run: rubocop
   rspec-test:
     name: RSpec
-    needs: rubocop-test
+    # needs: rubocop-test
     runs-on: ubuntu-18.04
     services:
       postgres:
