@@ -45,6 +45,25 @@ Github permit to use Actions to work with Continuous Integration (CI).
 On root create a folder named .Github and inside an other folder named Workflow.
 Inside this last folder create a file my_first_CI.yml
 You need to write the script Github Action will run after you push.
+Basicaly, you describe what you want to test and you want to run it.
+
+- name: put the name of your Github Action
+- on: frequency of running it (ex: pull_request, push)
+- jobs: an action to run divided in options and steps
+
+To create a job you need :
+```
+job-goal:
+  name: Goal
+  services:
+    db-service-you-are-using
+  steps:
+    - uses: to check versions
+    - name: step name
+      run: the shell script doing the step
+```
+If you need a specific environment you can and an env: variable to each step or job.
+For a [setup tutorial](https://www.pibit.nl/github/actions/rails/postgres/rspec/tutorial/example/2019/09/23/github-actions-with-rails-postgres-and-rspec/)
 
 ## Installation
 
