@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: learn-continuous-integration
 on: [push]
 jobs:
   check-bats-version:
@@ -8,3 +8,64 @@ jobs:
       - uses: actions/setup-node@v1
       - run: npm install -g bats
       - run: bats -v
+  rubocop-test:
+    name: Rubocop
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+      - name: Install Rubocop
+        run: gem install rubocop
+      - name: Check code
+        run: rubocop
+  rspec-test:
+    name: RSpec
+    runs-on: ubuntu-18.04
+    services:
+      postgres:
+        image: postgres:11
+        ports: ['5432:5432']
+        env:
+          RAILS_ENV: test
+          POSTGRES_HOST: ${{ env.DB_HOST }}
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+      - name: Install library for postgres
+        run: sudo apt-get -yqq install libpq-dev
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+      - name: Prepare database
+        env:
+          RAILS_ENV: test
+          POSTGRES_HOST: ${{ env.DB_HOST }}
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+          POSTGRES_DB: rspec_crud_test
+          POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
+        run: |
+          cp config/database.yml config/database.yml.ci
+          bundle exec rails db:prepare
+      - name: Run tests
+        env:
+          DEVELOPER_EMAIL_ADDRESS: ${{ env.DEVELOPER_EMAIL_ADDRESS }}
+        run: bundler exec rspec
+      - name: Upload coverage results
+        uses: actions/upload-artifact@master
+        if: always()
+        with:
+          name: coverage-report
+          path: coverage
