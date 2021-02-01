@@ -29,7 +29,7 @@ jobs:
     name: RSpec
     needs: rubocop-test
     runs-on: ubuntu-18.04
-      services:
+    services:
       postgres:
         image: postgres:latest
         ports:
