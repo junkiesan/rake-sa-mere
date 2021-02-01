@@ -11,6 +11,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'shoulda-matchers'
+  gem 'simple-cov'
 end
 ```
 
@@ -34,6 +35,16 @@ end
 
 ### Factory Bot
 
+A gem that allow to populate your tests with data.
+
+
+### Github Actions
+
+Github permit to use Actions to work with Continuous Integration (CI).
+
+On root create a folder named .Github and inside an other folder named Workflow.
+Inside this last folder create a file my_first_CI.yml
+You need to write the script Github Action will run after you push.
 
 ## Installation
 

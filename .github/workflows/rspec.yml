@@ -3,6 +3,7 @@ env:
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: ""
   POSTGRES_DB: postgres
+  DB_HOST: localhost
 name: learn-continuous-integration
 on: [push]
 jobs:
@@ -32,8 +33,17 @@ jobs:
     services:
       postgres:
         image: postgres:latest
-        ports:
-        - 5432:5432
+        ports: ['5432:5432']
+        env:
+          RAILS_ENV: test
+          POSTGRES_HOST: ${{ env.DB_HOST }}
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-ruby@v1
@@ -44,8 +54,15 @@ jobs:
       - name: Install dependencies
         run: |
           gem install bundler
-          bundler install
+          bundle install --jobs 4 --retry 3
       - name: Create database
+        env:
+          RAILS_ENV: test
+          POSTGRES_HOST: ${{ env.DB_HOST }}
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+          POSTGRES_DB: rake_sa_mere
+          POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
         run: |
           bundler exec rails db:create RAILS_ENV=test
           bundler exec rails db:migrate RAILS_ENV=test
