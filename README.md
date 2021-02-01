@@ -1,9 +1,7 @@
 # Rake sa mère
-### A simple tutorial to create clean and simple tests for
+### A simple tutorial to create clean and simple tests for rails projects
 
 ## Stack
-
-- Rspec
 
 ```
 group :development, :test do
@@ -48,6 +46,16 @@ end
 ```
 
 If you want to learn more about Factory Bot use this [cheatsheet](https://devhints.io/factory_bot)
+
+### Simple Cov
+
+A gem that help to check your specs as they grow.
+
+in *rails_helper.rb*
+```
+require 'simplecov'
+SimpleCov.start
+```
 
 ### Github Actions
 
